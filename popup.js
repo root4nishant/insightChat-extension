@@ -12,7 +12,7 @@ document.getElementById("analyze").addEventListener("click", () => {
     chrome.scripting.executeScript(
       {
         target: { tabId: tabs[0].id },
-        files: ["content.js"], 
+        files: ["content.js"],
       },
       () => {
         if (chrome.runtime.lastError) {
@@ -31,11 +31,7 @@ document.getElementById("analyze").addEventListener("click", () => {
               if (data && data.chatAnalysis) {
                 document.getElementById(
                   "result"
-                ).innerHTML = `<pre>${JSON.stringify(
-                  data.chatAnalysis,
-                  null,
-                  2
-                )}</pre>`;
+                ).innerHTML = `<pre>Your Data is ready visit <a href="http://localhost:3000/dashboard" target="_blank">localhost:3000/dashboard</a> </pre>`;
               } else {
                 console.warn("⚠️ No AI analysis found in storage!");
                 document.getElementById("result").innerText =

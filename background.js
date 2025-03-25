@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return;
       }
 
-      fetch("https://insight-chat-root.vercel.app/process_chat", {
+      fetch("http://127.0.0.1:8000/process_chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
