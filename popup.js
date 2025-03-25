@@ -31,7 +31,7 @@ document.getElementById("analyze").addEventListener("click", () => {
               if (data && data.chatAnalysis) {
                 document.getElementById(
                   "result"
-                ).innerHTML = `<pre>Your Data is ready visit <a href="http://localhost:3000/dashboard" target="_blank">localhost:3000/dashboard</a> </pre>`;
+                ).innerHTML = `<pre>Your Data is ready visit </br> <a href="http://localhost:3000/dashboard" target="_blank">localhost:3000/dashboard</a> </pre>`;
               } else {
                 console.warn("⚠️ No AI analysis found in storage!");
                 document.getElementById("result").innerText =
