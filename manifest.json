@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp AI Insights",
+  "version": "1.0",
+  "description": "Extract WhatsApp messages and analyze them with AI.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["http://127.0.0.1:8000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/"],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["http://localhost:3000/*"],
+      "js": ["token-listener.js"]
+    }
+  ]
+}
