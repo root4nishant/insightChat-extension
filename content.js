@@ -1,10 +1,10 @@
 function extractMessages() {
-  console.log("🚀 ExtractMessages Function Called!");
+  console.log("ExtractMessages Function Called!");
 
   let chatMessages = [];
   let messages = document.querySelectorAll("div.message-in, div.message-out");
 
-  console.log("✅ Found Messages:", messages);
+  console.log("Found Messages:", messages);
 
   messages.forEach((msg) => {
     let textElement = msg.querySelector("span.copyable-text");
@@ -37,26 +37,26 @@ function extractMessages() {
         text: messageText,
         time: timestamp,
       });
-      console.log("📩", messageText, "| ⏰", timestamp);
+      console.log("Message Text", messageText, "| Timestamp", timestamp);
     }
   });
 
   if (chatMessages.length > 0) {
-    console.log("📨 Sending Messages to Background:", chatMessages);
+    console.log("Sending Messages to Background:", chatMessages);
     const onlyTexts = chatMessages.map((m) => m.text);
 
     chrome.runtime.sendMessage(
       { action: "send_chat", data: onlyTexts },
       function (response) {
         if (chrome.runtime.lastError) {
-          console.error("❌ Message sending failed:", chrome.runtime.lastError);
+          console.error("Message sending failed:", chrome.runtime.lastError);
         } else {
-          console.log("✅ Message sent successfully!", response);
+          console.log("Message sent successfully!", response);
         }
       }
     );
   } else {
-    console.warn("⚠️ No messages extracted!");
+    console.warn("No messages extracted!");
   }
 }
 

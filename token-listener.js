@@ -12,4 +12,5 @@ window.addEventListener("message", (event) => {
       sessionId: event.data.sessionId,
     });
   }
+  console.log("📥 Content script received message:", event.data);
 });
