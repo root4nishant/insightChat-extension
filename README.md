@@ -24,3 +24,7 @@ This extension is part of the **InsightChat** SaaS ecosystem. It works by inject
 - Extracting raw chat content directly from WhatsApp Web DOM
 - Acting as a bridge between the user’s browser and the AI backend
 - Serving as the real-time entry point for intelligent message analysis
+
+
+```bash
+    "permissions": ["storage", "scripting", "activeTab", "tabs"]
