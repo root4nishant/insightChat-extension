@@ -10,7 +10,7 @@ This extension is part of the **InsightChat** SaaS ecosystem. It works by inject
 
 ---
 
-## 💡 Features
+## Features
 
 - Injects script into WhatsApp Web
 - Scrapes visible messages from the DOM
@@ -18,7 +18,7 @@ This extension is part of the **InsightChat** SaaS ecosystem. It works by inject
 - Sends payload securely to `/process_chat` endpoint
 - Supports both manual trigger and automatic capture
 
-## Contribution to SaaS
+## Contribution to InsightChat
 
 - This extension is a key part of the InsightChat platform by:
 - Extracting raw chat content directly from WhatsApp Web DOM
